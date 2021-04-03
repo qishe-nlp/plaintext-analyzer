@@ -1,0 +1,6 @@
+__pycache__
+dist
+*.pyc
+/*.txt
+/*.csv
+apidocs/build
