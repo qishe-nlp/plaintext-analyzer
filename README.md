@@ -119,7 +119,7 @@ make html
 python -m http.server -d build/html
 ```
 
-### Hose docs on github pages
+### Host docs on github pages
 ```
 cp -rf apidocs/build/html/* docs/
 ```
@@ -131,6 +131,7 @@ cp -rf apidocs/build/html/* docs/
 ### Git commit and push
 
 ### Publish from local dev env
+
 * Set pypi test environment variables in poetry, refer to [poetry doc](https://python-poetry.org/docs/repositories/)
 * Publish to pypi test by `poetry publish -r test`
 
