@@ -15,8 +15,8 @@ import json
 @click.option("--source", help="Specify the filename or plaintext itself", prompt="source")
 @click.option("--stype", help="RAW or FILE", prompt="source type[TEXT|FILE]")
 @click.option("--lang", help="Specify the language", default="en", prompt="language")
-@click.option("--dstname", required=False, help="Specify the output csv name", default=None, type=click.Path())
-@click.option("--google", help="Whether extra help needed", type=bool, prompt="extra help", default=False)
+@click.option("--dstname", required=False, help="Specify the output csv name", default=None)
+@click.option("--google", required=False, help="Whether extra help needed", type=bool, default=False)
 def parser_vocab(source, stype, lang, dstname, google):
 
   phase = {"step": 1, "msg": "Start sentenizing"}
@@ -50,7 +50,7 @@ def parser_vocab(source, stype, lang, dstname, google):
 @click.option("--source", help="Specify the filename or plaintext itself", prompt="source")
 @click.option("--stype", help="RAW or FILE", prompt="source type[TEXT|FILE]")
 @click.option("--lang", help="Specify the language", default="en", prompt="language")
-@click.option("--dstname", required=False, help="Specify the output csv name", default=None, type=click.Path())
+@click.option("--dstname", required=False, help="Specify the output csv name", default=None)
 def parser_phrase(source, stype, lang, dstname):
 
   phase = {"step": 1, "msg": "Start sentenizing"}
