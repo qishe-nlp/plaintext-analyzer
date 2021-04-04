@@ -32,5 +32,5 @@ class PlaintextReader:
     """list of str: sentences in file content 
     """
     doc = self._nlp(self.text)
-    sentences = [s.text for s in list(doc.sents)]
+    sentences = [s.text for s in list(doc.sents) if s.text.strip() != ""]
     return sentences
