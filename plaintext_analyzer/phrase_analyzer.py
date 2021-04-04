@@ -46,7 +46,7 @@ class PhraseAnalyzer:
       sens (list): sentences
 
     Returns:
-      list of dict: one element contains phrases for each sentence 
+      list of dict: one element contains phrases for each sentence. one element has keys: ``sentence``, ``noun_phrases``, ``prep_phrases``, ``verb_phrases``, ``verbs`` 
     """
 
     result = []
@@ -55,10 +55,16 @@ class PhraseAnalyzer:
       sentence_obj = self._explain_sentence(p["sentence"])
       nps_obj = self._explain_default_phrases(p["noun_phrases"])
       pps_obj = self._explain_default_phrases(p["prep_phrases"]) 
+      #vps_obj = self._explain_default_phrases(p["verb_phrases"])
+      vps_obj = p["verb_phrases"]
+      vs_obj = p["verbs"]
+    
       r = {
         "sentence": sentence_obj,
         "noun_phrases": nps_obj,
         "prep_phrases": pps_obj, 
+        "verb_phrases": vps_obj,
+        "verbs": vs_obj
       }
       result.append(r)
     return result
