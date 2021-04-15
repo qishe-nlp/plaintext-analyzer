@@ -2,7 +2,7 @@
 name = "plaintext-analyzer"
 version = "0.1.2"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Phoenix Grey <phoenix.grey0108@gmail.com>"]
 repository = "https://github.com/qishe-nlp/plaintext-analyzer"
 readme = "README.md"
 documentation = "https://qishe-nlp.github.io/plaintext-analyzer/"
