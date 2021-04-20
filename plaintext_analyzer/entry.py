@@ -31,7 +31,7 @@ def parser_vocab(source, stype, lang, dstname, google):
   analyzer = VocabAnalyzer(lang)
   exs = analyzer.overview_vocabs(sens, google)
   simple_exs = [{k:v for k,v in e.items() if k in ['word', 'dict_pos', 'meaning']} for e in exs]
-  shown = simple_exs[:20]
+  shown = simple_exs[:15]
 
   phase = {"step": 3, "msg": "Finish vocabs dictionary lookup", "vocabs": shown}
   print(json.dumps(phase), flush=True)
@@ -65,7 +65,7 @@ def parser_phrase(source, stype, lang, dstname):
   analyzer = PhraseAnalyzer(lang)
   exs = analyzer.overview_phrases(sens)
 
-  phase = {"step": 3, "msg": "Finish vocabs dictionary lookup", "vocabs": exs[:3]}
+  phase = {"step": 3, "msg": "Finish phrase dictionary lookup", "phrase": exs[:2]}
   print(json.dumps(phase), flush=True)
 
   if dstname:
