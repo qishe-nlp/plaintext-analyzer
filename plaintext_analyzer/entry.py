@@ -65,7 +65,7 @@ def parser_phrase(source, stype, lang, dstname):
   analyzer = PhraseAnalyzer(lang)
   exs = analyzer.overview_phrases(sens)
 
-  phase = {"step": 3, "msg": "Finish phrase dictionary lookup", "phrase": exs[:2]}
+  phase = {"step": 3, "msg": "Finish phrase dictionary lookup", "phrases": exs[:2]}
   print(json.dumps(phase), flush=True)
 
   if dstname:
