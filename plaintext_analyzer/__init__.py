@@ -30,7 +30,7 @@
     print(exs)
 """
 
-__version__ = '0.1.5'
+__version__ = '0.1.6'
 
 from .file_reader import PlaintextReader
 from .file_writer import CSVWriter

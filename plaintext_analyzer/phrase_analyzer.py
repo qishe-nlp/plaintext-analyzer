@@ -54,14 +54,11 @@ class PhraseAnalyzer:
     for p in ps:
       sentence_obj = self._explain_sentence(p["sentence"])
       nps_obj = self._explain_default_phrases(p["noun_phrases"])
-      #vps_obj = self._explain_default_phrases(p["verb_phrases"])
-      vps_obj = p["verb_phrases"]
       vs_obj = p["verbs"]
     
       r = {
         "sentence": sentence_obj,
         "noun_phrases": nps_obj,
-        "verb_phrases": vps_obj,
         "verbs": vs_obj
       }
       result.append(r)
