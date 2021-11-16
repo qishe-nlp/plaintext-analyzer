@@ -4,3 +4,4 @@ dist
 /*.txt
 /*.csv
 apidocs/build
+*.json

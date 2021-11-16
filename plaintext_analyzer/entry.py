@@ -1,6 +1,6 @@
 from plaintext_analyzer import PlaintextReader
-from plaintext_analyzer import VocabAnalyzer, PhraseAnalyzer
-from plaintext_analyzer import CSVWriter
+from plaintext_analyzer import VocabAnalyzer, PhraseAnalyzer, StructureKGAnalyzer
+from plaintext_analyzer import CSVWriter, write_to_json
 
 import click
 import json
@@ -73,6 +73,34 @@ def parser_phrase(source, stype, lang, dstname):
     csv_writer.write(exs)
 
     phase = {"step": 4, "msg": "Finish csv saving"} 
+    print(json.dumps(phase), flush=True)
+
+@click.command()
+@click.option("--source", help="Specify the filename or plaintext itself", prompt="source")
+@click.option("--stype", help="RAW or FILE", prompt="source type[TEXT|FILE]")
+@click.option("--lang", help="Specify the language", default="en", prompt="language")
+@click.option("--dstname", required=False, help="Specify the output csv name", default=None)
+def parser_structure_kg(source, stype, lang, dstname):
+
+  phase = {"step": 1, "msg": "Start sentenizing"}
+  print(json.dumps(phase), flush=True)
+
+  sf = PlaintextReader(source, stype, lang)
+  sens = sf.sentences
+
+  phase = {"step": 2, "msg": "Finish sentenizing"}
+  print(json.dumps(phase), flush=True)
+
+  analyzer = StructureKGAnalyzer(lang)
+  exs = analyzer.overview_structure_kg(sens)
+
+  phase = {"step": 3, "msg": "Finish phrase dictionary lookup", "structure_kg": exs[:2]}
+  print(json.dumps(phase), flush=True)
+
+  if dstname:
+    write_to_json(exs, dstname)
+
+    phase = {"step": 4, "msg": "Finish json saving"} 
     print(json.dumps(phase), flush=True)
 
 

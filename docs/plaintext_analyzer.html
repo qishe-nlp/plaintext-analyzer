@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>plaintext_analyzer package &mdash; plaintext_analyzer 0.1.6 documentation</title>
+  <title>plaintext_analyzer package &mdash; plaintext_analyzer 0.1.7 documentation</title>
   
 
   
@@ -92,6 +92,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#module-plaintext_analyzer.file_reader">plaintext_analyzer.file_reader module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-plaintext_analyzer.file_writer">plaintext_analyzer.file_writer module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-plaintext_analyzer.phrase_analyzer">plaintext_analyzer.phrase_analyzer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-plaintext_analyzer.structure_kg_analyzer">plaintext_analyzer.structure_kg_analyzer module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-plaintext_analyzer.vocab_analyzer">plaintext_analyzer.vocab_analyzer module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-plaintext_analyzer">Module contents</a></li>
 </ul>
@@ -293,6 +294,38 @@
 </dd></dl>
 
 </dd></dl>
+
+</div>
+<div class="section" id="module-plaintext_analyzer.structure_kg_analyzer">
+<span id="plaintext-analyzer-structure-kg-analyzer-module"></span><h2>plaintext_analyzer.structure_kg_analyzer module<a class="headerlink" href="#module-plaintext_analyzer.structure_kg_analyzer" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="plaintext_analyzer.structure_kg_analyzer.StructureKGAnalyzer">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">plaintext_analyzer.structure_kg_analyzer.</span></code><code class="sig-name descname"><span class="pre">StructureKGAnalyzer</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lang</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.structure_kg_analyzer.StructureKGAnalyzer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Analyze sentence structure and kg of sentences</p>
+<dl class="py method">
+<dt id="plaintext_analyzer.structure_kg_analyzer.StructureKGAnalyzer.overview_structure_kg">
+<code class="sig-name descname"><span class="pre">overview_structure_kg</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sens</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.structure_kg_analyzer.StructureKGAnalyzer.overview_structure_kg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get structure and kg with translation from sentences.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sens</strong> (<em>list</em>) – sentences</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>one element contains kg and structure for each sentence. one element has keys: <code class="docutils literal notranslate"><span class="pre">sentence</span></code>, <code class="docutils literal notranslate"><span class="pre">kg</span></code>, <code class="docutils literal notranslate"><span class="pre">structure</span></code></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="plaintext_analyzer.structure_kg_analyzer.add_bracket">
+<code class="sig-prename descclassname"><span class="pre">plaintext_analyzer.structure_kg_analyzer.</span></code><code class="sig-name descname"><span class="pre">add_bracket</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ex</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.structure_kg_analyzer.add_bracket" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </div>
 <div class="section" id="module-plaintext_analyzer.vocab_analyzer">

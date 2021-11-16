@@ -30,9 +30,10 @@
     print(exs)
 """
 
-__version__ = '0.1.6'
+__version__ = '0.1.7'
 
 from .file_reader import PlaintextReader
-from .file_writer import CSVWriter
+from .file_writer import CSVWriter, write_to_json
 from .vocab_analyzer import VocabAnalyzer
 from .phrase_analyzer import PhraseAnalyzer
+from .structure_kg_analyzer import StructureKGAnalyzer

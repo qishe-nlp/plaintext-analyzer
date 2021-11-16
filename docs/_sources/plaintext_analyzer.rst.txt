@@ -36,6 +36,14 @@ plaintext\_analyzer.phrase\_analyzer module
    :undoc-members:
    :show-inheritance:
 
+plaintext\_analyzer.structure\_kg\_analyzer module
+--------------------------------------------------
+
+.. automodule:: plaintext_analyzer.structure_kg_analyzer
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 plaintext\_analyzer.vocab\_analyzer module
 ------------------------------------------
 
