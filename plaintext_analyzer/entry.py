@@ -94,7 +94,7 @@ def parser_structure_kg(source, stype, lang, dstname):
   analyzer = StructureKGAnalyzer(lang)
   exs = analyzer.overview_structure_kg(sens)
 
-  phase = {"step": 3, "msg": "Finish phrase dictionary lookup", "structure_kg": exs[:2]}
+  phase = {"step": 3, "msg": "Finish dictionary lookup", "structure_kg": exs[:2]}
   print(json.dumps(phase), flush=True)
 
   if dstname:
