@@ -79,7 +79,7 @@ def parser_phrase(source, stype, lang, dstname):
 @click.option("--source", help="Specify the filename or plaintext itself", prompt="source")
 @click.option("--stype", help="RAW or FILE", prompt="source type[TEXT|FILE]")
 @click.option("--lang", help="Specify the language", default="en", prompt="language")
-@click.option("--dstname", required=False, help="Specify the output csv name", default=None)
+@click.option("--dstname", required=False, help="Specify the output json name", default=None)
 def parser_structure_kg(source, stype, lang, dstname):
 
   phase = {"step": 1, "msg": "Start sentenizing"}
