@@ -1,9 +1,9 @@
-.. plaintext_analyzer documentation master file, created by
-   sphinx-quickstart on Sat Apr  3 17:16:00 2021.
+.. plaintext-analyzer documentation master file, created by
+   sphinx-quickstart on Mon May 15 12:18:39 2023.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to plaintext_analyzer's documentation!
+Welcome to plaintext-analyzer's documentation!
 ==============================================
 
 .. toctree::

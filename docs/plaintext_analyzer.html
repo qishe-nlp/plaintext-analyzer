@@ -1,205 +1,149 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>plaintext_analyzer package &mdash; plaintext_analyzer 0.1.8 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+  <title>plaintext_analyzer package &mdash; plaintext-analyzer 0.1.13 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="plaintext_analyzer" href="modules.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="index.html" class="icon icon-home"> plaintext_analyzer
           
-
-          
+          <a href="index.html" class="icon icon-home">
+            plaintext-analyzer
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="modules.html">plaintext_analyzer</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">plaintext_analyzer package</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-plaintext_analyzer.entry">plaintext_analyzer.entry module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-plaintext_analyzer.file_reader">plaintext_analyzer.file_reader module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-plaintext_analyzer.file_writer">plaintext_analyzer.file_writer module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-plaintext_analyzer.phrase_analyzer">plaintext_analyzer.phrase_analyzer module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-plaintext_analyzer.structure_kg_analyzer">plaintext_analyzer.structure_kg_analyzer module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-plaintext_analyzer.vocab_analyzer">plaintext_analyzer.vocab_analyzer module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-plaintext_analyzer">Module contents</a></li>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">plaintext_analyzer package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-plaintext_analyzer.entry">plaintext_analyzer.entry module</a></li>
+<li><a class="reference internal" href="#module-plaintext_analyzer.file_reader">plaintext_analyzer.file_reader module</a><ul>
+<li><a class="reference internal" href="#plaintext_analyzer.file_reader.PlaintextReader"><code class="docutils literal notranslate"><span class="pre">PlaintextReader</span></code></a><ul>
+<li><a class="reference internal" href="#plaintext_analyzer.file_reader.PlaintextReader.text"><code class="docutils literal notranslate"><span class="pre">PlaintextReader.text</span></code></a></li>
+<li><a class="reference internal" href="#plaintext_analyzer.file_reader.PlaintextReader.sentences"><code class="docutils literal notranslate"><span class="pre">PlaintextReader.sentences</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li><a class="reference internal" href="#module-plaintext_analyzer.file_writer">plaintext_analyzer.file_writer module</a><ul>
+<li><a class="reference internal" href="#plaintext_analyzer.file_writer.CSVWriter"><code class="docutils literal notranslate"><span class="pre">CSVWriter</span></code></a><ul>
+<li><a class="reference internal" href="#plaintext_analyzer.file_writer.CSVWriter.dstfile"><code class="docutils literal notranslate"><span class="pre">CSVWriter.dstfile</span></code></a></li>
+<li><a class="reference internal" href="#plaintext_analyzer.file_writer.CSVWriter.write"><code class="docutils literal notranslate"><span class="pre">CSVWriter.write()</span></code></a></li>
 </ul>
-
-            
-          
+</li>
+<li><a class="reference internal" href="#plaintext_analyzer.file_writer.write_to_csv"><code class="docutils literal notranslate"><span class="pre">write_to_csv()</span></code></a></li>
+<li><a class="reference internal" href="#plaintext_analyzer.file_writer.write_to_json"><code class="docutils literal notranslate"><span class="pre">write_to_json()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-plaintext_analyzer.phrase_analyzer">plaintext_analyzer.phrase_analyzer module</a><ul>
+<li><a class="reference internal" href="#plaintext_analyzer.phrase_analyzer.PhraseAnalyzer"><code class="docutils literal notranslate"><span class="pre">PhraseAnalyzer</span></code></a><ul>
+<li><a class="reference internal" href="#plaintext_analyzer.phrase_analyzer.PhraseAnalyzer.overview_phrases"><code class="docutils literal notranslate"><span class="pre">PhraseAnalyzer.overview_phrases()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-plaintext_analyzer.structure_kg_analyzer">plaintext_analyzer.structure_kg_analyzer module</a><ul>
+<li><a class="reference internal" href="#plaintext_analyzer.structure_kg_analyzer.StructureKGAnalyzer"><code class="docutils literal notranslate"><span class="pre">StructureKGAnalyzer</span></code></a><ul>
+<li><a class="reference internal" href="#plaintext_analyzer.structure_kg_analyzer.StructureKGAnalyzer.overview_structure_kg"><code class="docutils literal notranslate"><span class="pre">StructureKGAnalyzer.overview_structure_kg()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#plaintext_analyzer.structure_kg_analyzer.add_bracket"><code class="docutils literal notranslate"><span class="pre">add_bracket()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-plaintext_analyzer.vocab_analyzer">plaintext_analyzer.vocab_analyzer module</a><ul>
+<li><a class="reference internal" href="#plaintext_analyzer.vocab_analyzer.VocabAnalyzer"><code class="docutils literal notranslate"><span class="pre">VocabAnalyzer</span></code></a><ul>
+<li><a class="reference internal" href="#plaintext_analyzer.vocab_analyzer.VocabAnalyzer.overview_vocabs"><code class="docutils literal notranslate"><span class="pre">VocabAnalyzer.overview_vocabs()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-plaintext_analyzer">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">plaintext_analyzer</a>
-        
+          <a href="index.html">plaintext-analyzer</a>
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
-          <li><a href="modules.html">plaintext_analyzer</a> &raquo;</li>
-        
-      <li>plaintext_analyzer package</li>
-    
-    
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">plaintext_analyzer package</li>
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="_sources/plaintext_analyzer.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="plaintext-analyzer-package">
-<h1>plaintext_analyzer package<a class="headerlink" href="#plaintext-analyzer-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="module-plaintext_analyzer.entry">
-<span id="plaintext-analyzer-entry-module"></span><h2>plaintext_analyzer.entry module<a class="headerlink" href="#module-plaintext_analyzer.entry" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="module-plaintext_analyzer.file_reader">
-<span id="plaintext-analyzer-file-reader-module"></span><h2>plaintext_analyzer.file_reader module<a class="headerlink" href="#module-plaintext_analyzer.file_reader" title="Permalink to this headline">¶</a></h2>
+             
+  <section id="plaintext-analyzer-package">
+<h1>plaintext_analyzer package<a class="headerlink" href="#plaintext-analyzer-package" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-plaintext_analyzer.entry">
+<span id="plaintext-analyzer-entry-module"></span><h2>plaintext_analyzer.entry module<a class="headerlink" href="#module-plaintext_analyzer.entry" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-plaintext_analyzer.file_reader">
+<span id="plaintext-analyzer-file-reader-module"></span><h2>plaintext_analyzer.file_reader module<a class="headerlink" href="#module-plaintext_analyzer.file_reader" title="Permalink to this heading"></a></h2>
 <dl class="py class">
-<dt id="plaintext_analyzer.file_reader.PlaintextReader">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">plaintext_analyzer.file_reader.</span></code><code class="sig-name descname"><span class="pre">PlaintextReader</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lang</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.file_reader.PlaintextReader" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plaintext_analyzer.file_reader.PlaintextReader">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">plaintext_analyzer.file_reader.</span></span><span class="sig-name descname"><span class="pre">PlaintextReader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lang</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.file_reader.PlaintextReader" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Read plain text file</p>
 <dl class="py attribute">
-<dt id="plaintext_analyzer.file_reader.PlaintextReader.text">
-<code class="sig-name descname"><span class="pre">text</span></code><a class="headerlink" href="#plaintext_analyzer.file_reader.PlaintextReader.text" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plaintext_analyzer.file_reader.PlaintextReader.text">
+<span class="sig-name descname"><span class="pre">text</span></span><a class="headerlink" href="#plaintext_analyzer.file_reader.PlaintextReader.text" title="Permalink to this definition"></a></dt>
 <dd><p>content of file</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="plaintext_analyzer.file_reader.PlaintextReader.sentences">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">sentences</span></code><a class="headerlink" href="#plaintext_analyzer.file_reader.PlaintextReader.sentences" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="plaintext_analyzer.file_reader.PlaintextReader.sentences">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sentences</span></span><a class="headerlink" href="#plaintext_analyzer.file_reader.PlaintextReader.sentences" title="Permalink to this definition"></a></dt>
 <dd><p>sentences in file content</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list of str</p>
 </dd>
 </dl>
@@ -207,32 +151,32 @@
 
 </dd></dl>
 
-</div>
-<div class="section" id="module-plaintext_analyzer.file_writer">
-<span id="plaintext-analyzer-file-writer-module"></span><h2>plaintext_analyzer.file_writer module<a class="headerlink" href="#module-plaintext_analyzer.file_writer" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-plaintext_analyzer.file_writer">
+<span id="plaintext-analyzer-file-writer-module"></span><h2>plaintext_analyzer.file_writer module<a class="headerlink" href="#module-plaintext_analyzer.file_writer" title="Permalink to this heading"></a></h2>
 <dl class="py class">
-<dt id="plaintext_analyzer.file_writer.CSVWriter">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">plaintext_analyzer.file_writer.</span></code><code class="sig-name descname"><span class="pre">CSVWriter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.file_writer.CSVWriter" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plaintext_analyzer.file_writer.CSVWriter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">plaintext_analyzer.file_writer.</span></span><span class="sig-name descname"><span class="pre">CSVWriter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.file_writer.CSVWriter" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Write object into csv file.</p>
 <dl class="py attribute">
-<dt id="plaintext_analyzer.file_writer.CSVWriter.dstfile">
-<code class="sig-name descname"><span class="pre">dstfile</span></code><a class="headerlink" href="#plaintext_analyzer.file_writer.CSVWriter.dstfile" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plaintext_analyzer.file_writer.CSVWriter.dstfile">
+<span class="sig-name descname"><span class="pre">dstfile</span></span><a class="headerlink" href="#plaintext_analyzer.file_writer.CSVWriter.dstfile" title="Permalink to this definition"></a></dt>
 <dd><p>destnation file name with extension</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt id="plaintext_analyzer.file_writer.CSVWriter.write">
-<code class="sig-name descname"><span class="pre">write</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.file_writer.CSVWriter.write" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plaintext_analyzer.file_writer.CSVWriter.write">
+<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.file_writer.CSVWriter.write" title="Permalink to this definition"></a></dt>
 <dd><p>Write content into csv</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>content</strong> (<em>list of dict</em>) – content to be written into csv file</p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>content</strong> (<em>list</em><em> of </em><em>dict</em>) – content to be written into csv file</p>
 </dd>
 </dl>
 </dd></dl>
@@ -240,14 +184,14 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="plaintext_analyzer.file_writer.write_to_csv">
-<code class="sig-prename descclassname"><span class="pre">plaintext_analyzer.file_writer.</span></code><code class="sig-name descname"><span class="pre">write_to_csv</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fields</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">csvfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'output.csv'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.file_writer.write_to_csv" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plaintext_analyzer.file_writer.write_to_csv">
+<span class="sig-prename descclassname"><span class="pre">plaintext_analyzer.file_writer.</span></span><span class="sig-name descname"><span class="pre">write_to_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fields</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">csvfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'output.csv'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.file_writer.write_to_csv" title="Permalink to this definition"></a></dt>
 <dd><p>Write content into csv file</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>fields</strong> (<em>list of str</em>) – heads of content</p></li>
-<li><p><strong>content</strong> (<em>list of dict</em>) – one item in content is one line in csv file</p></li>
+<li><p><strong>fields</strong> (<em>list</em><em> of </em><em>str</em>) – heads of content</p></li>
+<li><p><strong>content</strong> (<em>list</em><em> of </em><em>dict</em>) – one item in content is one line in csv file</p></li>
 <li><p><strong>csvfile</strong> (<em>str</em>) – csv file path</p></li>
 </ul>
 </dd>
@@ -255,39 +199,39 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="plaintext_analyzer.file_writer.write_to_json">
-<code class="sig-prename descclassname"><span class="pre">plaintext_analyzer.file_writer.</span></code><code class="sig-name descname"><span class="pre">write_to_json</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jsonfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'output.json'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.file_writer.write_to_json" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plaintext_analyzer.file_writer.write_to_json">
+<span class="sig-prename descclassname"><span class="pre">plaintext_analyzer.file_writer.</span></span><span class="sig-name descname"><span class="pre">write_to_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jsonfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'output.json'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.file_writer.write_to_json" title="Permalink to this definition"></a></dt>
 <dd><p>Write content into json file</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>content</strong> (<em>list of dict</em>) – content to be written into json file</p></li>
+<li><p><strong>content</strong> (<em>list</em><em> of </em><em>dict</em>) – content to be written into json file</p></li>
 <li><p><strong>jsonfile</strong> (<em>str</em>) – json file path</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-</div>
-<div class="section" id="module-plaintext_analyzer.phrase_analyzer">
-<span id="plaintext-analyzer-phrase-analyzer-module"></span><h2>plaintext_analyzer.phrase_analyzer module<a class="headerlink" href="#module-plaintext_analyzer.phrase_analyzer" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-plaintext_analyzer.phrase_analyzer">
+<span id="plaintext-analyzer-phrase-analyzer-module"></span><h2>plaintext_analyzer.phrase_analyzer module<a class="headerlink" href="#module-plaintext_analyzer.phrase_analyzer" title="Permalink to this heading"></a></h2>
 <dl class="py class">
-<dt id="plaintext_analyzer.phrase_analyzer.PhraseAnalyzer">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">plaintext_analyzer.phrase_analyzer.</span></code><code class="sig-name descname"><span class="pre">PhraseAnalyzer</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lang</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.phrase_analyzer.PhraseAnalyzer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plaintext_analyzer.phrase_analyzer.PhraseAnalyzer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">plaintext_analyzer.phrase_analyzer.</span></span><span class="sig-name descname"><span class="pre">PhraseAnalyzer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lang</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.phrase_analyzer.PhraseAnalyzer" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Analyze phrase of sentences</p>
 <dl class="py method">
-<dt id="plaintext_analyzer.phrase_analyzer.PhraseAnalyzer.overview_phrases">
-<code class="sig-name descname"><span class="pre">overview_phrases</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sens</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.phrase_analyzer.PhraseAnalyzer.overview_phrases" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plaintext_analyzer.phrase_analyzer.PhraseAnalyzer.overview_phrases">
+<span class="sig-name descname"><span class="pre">overview_phrases</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sens</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.phrase_analyzer.PhraseAnalyzer.overview_phrases" title="Permalink to this definition"></a></dt>
 <dd><p>Get phrases with explanation from sentences.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sens</strong> (<em>list</em>) – sentences</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>one element contains phrases for each sentence. one element has keys: <code class="docutils literal notranslate"><span class="pre">sentence</span></code>, <code class="docutils literal notranslate"><span class="pre">noun_phrases</span></code>, <code class="docutils literal notranslate"><span class="pre">prep_phrases</span></code>, <code class="docutils literal notranslate"><span class="pre">verb_phrases</span></code>, <code class="docutils literal notranslate"><span class="pre">verbs</span></code></p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list of dict</p>
 </dd>
 </dl>
@@ -295,26 +239,26 @@
 
 </dd></dl>
 
-</div>
-<div class="section" id="module-plaintext_analyzer.structure_kg_analyzer">
-<span id="plaintext-analyzer-structure-kg-analyzer-module"></span><h2>plaintext_analyzer.structure_kg_analyzer module<a class="headerlink" href="#module-plaintext_analyzer.structure_kg_analyzer" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-plaintext_analyzer.structure_kg_analyzer">
+<span id="plaintext-analyzer-structure-kg-analyzer-module"></span><h2>plaintext_analyzer.structure_kg_analyzer module<a class="headerlink" href="#module-plaintext_analyzer.structure_kg_analyzer" title="Permalink to this heading"></a></h2>
 <dl class="py class">
-<dt id="plaintext_analyzer.structure_kg_analyzer.StructureKGAnalyzer">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">plaintext_analyzer.structure_kg_analyzer.</span></code><code class="sig-name descname"><span class="pre">StructureKGAnalyzer</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lang</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.structure_kg_analyzer.StructureKGAnalyzer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plaintext_analyzer.structure_kg_analyzer.StructureKGAnalyzer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">plaintext_analyzer.structure_kg_analyzer.</span></span><span class="sig-name descname"><span class="pre">StructureKGAnalyzer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lang</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.structure_kg_analyzer.StructureKGAnalyzer" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Analyze sentence structure and kg of sentences</p>
 <dl class="py method">
-<dt id="plaintext_analyzer.structure_kg_analyzer.StructureKGAnalyzer.overview_structure_kg">
-<code class="sig-name descname"><span class="pre">overview_structure_kg</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sens</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.structure_kg_analyzer.StructureKGAnalyzer.overview_structure_kg" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plaintext_analyzer.structure_kg_analyzer.StructureKGAnalyzer.overview_structure_kg">
+<span class="sig-name descname"><span class="pre">overview_structure_kg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sens</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.structure_kg_analyzer.StructureKGAnalyzer.overview_structure_kg" title="Permalink to this definition"></a></dt>
 <dd><p>Get structure and kg with translation from sentences.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sens</strong> (<em>list</em>) – sentences</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>one element contains kg and structure for each sentence. one element has keys: <code class="docutils literal notranslate"><span class="pre">sentence</span></code>, <code class="docutils literal notranslate"><span class="pre">kg</span></code>, <code class="docutils literal notranslate"><span class="pre">structure</span></code></p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list of dict</p>
 </dd>
 </dl>
@@ -323,30 +267,30 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="plaintext_analyzer.structure_kg_analyzer.add_bracket">
-<code class="sig-prename descclassname"><span class="pre">plaintext_analyzer.structure_kg_analyzer.</span></code><code class="sig-name descname"><span class="pre">add_bracket</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ex</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.structure_kg_analyzer.add_bracket" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plaintext_analyzer.structure_kg_analyzer.add_bracket">
+<span class="sig-prename descclassname"><span class="pre">plaintext_analyzer.structure_kg_analyzer.</span></span><span class="sig-name descname"><span class="pre">add_bracket</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ex</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.structure_kg_analyzer.add_bracket" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-</div>
-<div class="section" id="module-plaintext_analyzer.vocab_analyzer">
-<span id="plaintext-analyzer-vocab-analyzer-module"></span><h2>plaintext_analyzer.vocab_analyzer module<a class="headerlink" href="#module-plaintext_analyzer.vocab_analyzer" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-plaintext_analyzer.vocab_analyzer">
+<span id="plaintext-analyzer-vocab-analyzer-module"></span><h2>plaintext_analyzer.vocab_analyzer module<a class="headerlink" href="#module-plaintext_analyzer.vocab_analyzer" title="Permalink to this heading"></a></h2>
 <dl class="py class">
-<dt id="plaintext_analyzer.vocab_analyzer.VocabAnalyzer">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">plaintext_analyzer.vocab_analyzer.</span></code><code class="sig-name descname"><span class="pre">VocabAnalyzer</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lang</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.vocab_analyzer.VocabAnalyzer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plaintext_analyzer.vocab_analyzer.VocabAnalyzer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">plaintext_analyzer.vocab_analyzer.</span></span><span class="sig-name descname"><span class="pre">VocabAnalyzer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lang</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.vocab_analyzer.VocabAnalyzer" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Analyze vocabulary of sentences</p>
 <dl class="py method">
-<dt id="plaintext_analyzer.vocab_analyzer.VocabAnalyzer.overview_vocabs">
-<code class="sig-name descname"><span class="pre">overview_vocabs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">google</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.vocab_analyzer.VocabAnalyzer.overview_vocabs" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plaintext_analyzer.vocab_analyzer.VocabAnalyzer.overview_vocabs">
+<span class="sig-name descname"><span class="pre">overview_vocabs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">google</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plaintext_analyzer.vocab_analyzer.VocabAnalyzer.overview_vocabs" title="Permalink to this definition"></a></dt>
 <dd><p>Get vocabularies with explanation from sentences, WITHOUT duplicates.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sens</strong> (<em>list</em>) – sentences</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>vocabularies</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list</p>
 </dd>
 </dl>
@@ -354,10 +298,10 @@
 
 </dd></dl>
 
-</div>
-<div class="section" id="module-plaintext_analyzer">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-plaintext_analyzer" title="Permalink to this headline">¶</a></h2>
-<div class="topic">
+</section>
+<section id="module-plaintext_analyzer">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-plaintext_analyzer" title="Permalink to this heading"></a></h2>
+<aside class="topic">
 <p class="topic-title">Analyze vocabularies</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">plaintext_analyzer</span> <span class="kn">import</span> <span class="n">PlaintextReader</span>
 <span class="kn">from</span> <span class="nn">plaintext_analyzer</span> <span class="kn">import</span> <span class="n">VocabAnalyzer</span>
@@ -371,8 +315,8 @@
 <span class="nb">print</span><span class="p">(</span><span class="n">exs</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="topic">
+</aside>
+<aside class="topic">
 <p class="topic-title">Analyze phrases</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">plaintext_analyzer</span> <span class="kn">import</span> <span class="n">PlaintextReader</span>
 <span class="kn">from</span> <span class="nn">plaintext_analyzer</span> <span class="kn">import</span> <span class="n">PhraseAnalyzer</span>
@@ -386,55 +330,36 @@
 <span class="nb">print</span><span class="p">(</span><span class="n">exs</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</aside>
+</section>
+</section>
 
 
            </div>
-           
           </div>
           <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="modules.html" class="btn btn-neutral float-left" title="plaintext_analyzer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-    </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, Phoenix Grey.
-
-    </p>
+    <p>&#169; Copyright 2023, Phoenix Grey.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

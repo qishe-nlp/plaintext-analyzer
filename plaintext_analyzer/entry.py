@@ -16,8 +16,8 @@ import json
 @click.option("--stype", help="RAW or FILE", prompt="source type[TEXT|FILE]")
 @click.option("--lang", help="Specify the language", default="en", prompt="language")
 @click.option("--dstname", required=False, help="Specify the output csv name", default=None)
-@click.option("--google", required=False, help="Whether extra help needed", type=bool, default=False)
-def parser_vocab(source, stype, lang, dstname, google):
+@click.option("--external", required=False, help="Whether extra help needed", type=bool, default=False)
+def parser_vocab(source, stype, lang, dstname, external):
 
   phase = {"step": 1, "msg": "Start sentenizing"}
   print(json.dumps(phase), flush=True)
@@ -29,7 +29,7 @@ def parser_vocab(source, stype, lang, dstname, google):
   print(json.dumps(phase), flush=True)
 
   analyzer = VocabAnalyzer(lang)
-  exs = analyzer.overview_vocabs(sens, google)
+  exs = analyzer.overview_vocabs(sens, external)
   simple_exs = [{k:v for k,v in e.items() if k in ['word', 'dict_pos', 'meaning']} for e in exs]
   shown = simple_exs[:15]
 

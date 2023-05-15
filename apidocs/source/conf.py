@@ -17,12 +17,10 @@ sys.path.insert(0, os.path.abspath('../..'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'plaintext_analyzer'
-copyright = '2021, Phoenix Grey'
+project = 'plaintext-analyzer'
+copyright = '2023, Phoenix Grey'
 author = 'Phoenix Grey'
-
-# The full version, including alpha/beta/rc tags
-release = '0.1.8'
+release = '0.1.13'
 
 
 # -- General configuration ---------------------------------------------------
@@ -50,7 +48,6 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-#html_theme = 'alabaster'
 html_theme = 'sphinx_rtd_theme'
 
 # Add any paths that contain custom static files (such as style sheets) here,

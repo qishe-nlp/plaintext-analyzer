@@ -44,7 +44,7 @@ class VocabAnalyzer:
         result.append(e)
     return result
 
-  def overview_vocabs(self, sens, google=False):
+  def overview_vocabs(self, sens, external=False):
     """Get vocabularies with explanation from sentences, WITHOUT duplicates.
 
     Args:
@@ -56,7 +56,7 @@ class VocabAnalyzer:
     result = []
     vs = self._unique_vocabs(sens)
     for v in vs:
-      r = self._dictAPI.search(v["word"], v["pos"], google)
+      r = self._dictAPI.search(v["word"], v["pos"], external)
       if r != None:
         result.append(r)
     return result
